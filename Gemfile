@@ -11,6 +11,9 @@ gem 'thin'
 gem 'devise', '~> 2.0'
 gem 'simple_form'
 gem 'slim-rails'
+gem 'twilio-ruby'
+gem 'httparty'
+gem 'nokogiri'
 
 # Gems used only for assets and not required
 # in production environments by default.

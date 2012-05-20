@@ -1,4 +1,6 @@
 Reeltoreel::Application.routes.draw do
+  get "showtimes/index"
+
   devise_for :users
 
   root :to => "main#index"
