@@ -1,0 +1,16 @@
+html
+  head
+    meta*{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}
+  body
+    h1= "Message from #{@contact[:name]}"
+    p
+      b Email
+      = @contact[:email]
+    p
+      b Phone
+      = @contact[:phone]
+    p
+      b Message
+      = @contact[:message]
+
+

@@ -34,4 +34,10 @@ Reeltoreel::Application.configure do
 
   # Print deprecation notices to the stderr
   config.active_support.deprecation = :stderr
+
+  #Mail Accounts
+  config.mail = { 
+    :contact => 'sdownie@sdownie.com',
+    :noreply => 'no-reply@sdownie.com',
+  }
 end

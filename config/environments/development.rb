@@ -36,5 +36,10 @@ Reeltoreel::Application.configure do
   config.assets.debug = true
 
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
-  config.action_mailer.delivery_method = :letter_opener
+
+  #Mail Accounts
+  config.mail = {
+    :contact => 'sdownie@sdownie.com',
+    :noreply => 'no-reply@sdownie.com',
+  }
 end
