@@ -25,7 +25,7 @@ group :assets do
   gem 'bootstrap-sass', :git => 'git://github.com/thomas-mcdonald/bootstrap-sass', :branch => '2.0.3'
   gem 'font-awesome-sass-rails'
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  # gem 'therubyracer'
+  gem 'therubyracer'
 
   gem 'uglifier', '>= 1.0.3'
 end
