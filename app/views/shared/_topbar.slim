@@ -1,0 +1,50 @@
+.navbar.navbar-fixed-top
+	.navbar-inner
+		.container-fluid
+			= link_to	t(:site_name), root_path, :class => "brand"
+
+			ul.nav.pull-left
+				li
+					a(href="#" title="Showtimes") Showtimes
+				li
+					a(href="#" title="Reel Deals!") Reel Deals!
+				li
+					a(href="#" title="Contact us") Contact
+
+			/ - if user_signed_in?
+			/ 	ul.nav.pull-right.right-nav
+			/ 		li
+			/ 			a(href="#") 
+			/ 				= current_user.email
+			/ 		li.divider-vertical
+			/ 		li
+			/ 			a(href="#{root_path}")
+			/ 				i.icon.icon-home
+			/ 				|  Home
+			/ 		li.divider-vertical
+			/ 		li.dropdown
+			/ 			a.dropdown-toggle(data-toggle="dropdown" href="#")
+			/ 				i.icon.icon-cog
+			/ 				|  Settings
+			/ 			ul.dropdown-menu
+			/ 				li
+			/ 					a(href="#{edit_user_registration_path}" title="My Account")
+			/ 						i.icon.icon-user
+			/ 						|  My Account
+			/ 				li.divider
+			/ 				li
+			/ 					a(href="#{destroy_user_session_path}" title="Sign out" data-method="delete")
+			/ 						i.icon.icon-signout
+			/ 						|  Sign out
+
+			/ - else
+			/ 	ul.nav.pull-right.right-nav
+			/ 		li
+			/ 			a(href="#{new_user_session_path}" title="Sign in")
+			/ 				i.icon.icon-signin
+			/ 				|  Sign in
+			/ 		li.divider-vertical
+			/ 		li
+			/ 			a(href="#{new_user_registration_path}" title="Sign up")
+			/ 				i.icon.icon-plus-sign
+			/ 				|  Sign up

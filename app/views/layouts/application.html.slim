@@ -1,0 +1,16 @@
+doctype 5
+html
+	head
+		title= yield :title || t(:site_name)
+
+		= stylesheet_link_tag "styles", :media => "screen, projection"
+		= csrf_meta_tags
+
+		body(class="#{params[:controller]}")
+			= render 'shared/topbar'
+			= render 'shared/alerts'
+
+			.container-fluid
+				= yield
+
+		= javascript_include_tag "application"

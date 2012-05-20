@@ -1,0 +1,10 @@
+.alerts
+	- if flash[:notice]
+		.alert.alert-info.fade.in
+			a.close(data-dismiss="alert") x
+			= flash[:notice]
+
+	- if flash[:alert]
+		.alert.alert-danger.fade.in
+			a.close(data-dismiss="alert") x
+			= flash[:alert]
