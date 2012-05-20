@@ -5,3 +5,7 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Role.create(:title => 'Admin')
+
+RoleUser.create(:user_id => User.find_by_email('scott@synaptian.com'),:role_id => Role.find_by_title(:Admin))
