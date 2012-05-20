@@ -1,5 +1,5 @@
 Reeltoreel::Application.routes.draw do
-  get "showtimes/index"
+  resources :showtimes
 
   devise_for :users
 

@@ -1,2 +1,15 @@
-h1 Showtimes#index
-p Find me in app/views/showtimes/index.html.slim
+.page-header
+	h1 
+		| Showtimes
+		small  Find out what plays when
+
+ul.unstyled.movies
+	- @showtimes.each do |movie|
+		li.listing(data-title="#{movie[:title]}")
+			.span3
+				.thumbnail
+					= link_to image_tag(movie[:imdb].poster), movie[:link]
+					.caption
+						h5= movie[:imdb].title
+						p= movie[:imdb].plot
+						ul.unstyled.showtimes
