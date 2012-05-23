@@ -3,21 +3,38 @@ coffee:
 		$('#slider').nivoSlider()
 
 .row-fluid
-	.span9
+	.span12
 		center
 			.theme-default
 				#slider.nivoSlider
-					= image_tag('Popcorn.jpg', :title => "Popcorn Image")
-					= image_tag('RealToReelTheater.jpg', :title => "Real to Reel Building Front")
+					= image_tag('Popcorn.jpg', :title => "Fresh Popcorn")
+					= image_tag('RealToReelTheater.jpg', :title => "Real to Reel Entrance")
 
-		.row-fluid
-			.span4.well
+.row-fluid
+	.span12
+		center
+			.span3.well
 				h3 Receive Movie Notifications
                 p Receive special Reel Deals, and notifications when new movies become available!
                 hr
-                span= link_to 'Subscribe!', root_path, :class => 'btn btn-primary btn-large'
+                = button_to_function "Subscribe","alert('Subscribed')", :class => 'btn btn-primary btn-large'
+			.span3.well
+				h3 Pricing
+				p Movies are $3.00 a movie. An additional $2.00 charge is added for 3-D movies.
+				hr
+			    span= link_to 'Reel Deals', deals_path, :class => 'btn btn-primary btn-large'
+			.span3.well
+				h3 Showtimes
+				p See a list of movies currently playing at Real to Real Theaters!
+				hr
+			    span= link_to 'Showtimes', showtimes_path, :class => 'btn btn-primary btn-large'
+			.span3.well
+				h3 Contact
+				p If you need any information about the theater. You can use the contact form to email us. 
+				hr
+				span = link_to 'Contact Us', contact_index_path, :class => 'btn btn-primary btn-large'
 
-			.span4.well
-				h3 Block 2
-			.span4.well
-				h3 Block 3
+
+
+.modal#myModal
+	.modal-header

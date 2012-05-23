@@ -1,5 +1,6 @@
 Reeltoreel::Application.routes.draw do
   resources :showtimes
+  resources :deals
 
   devise_for :users
 
