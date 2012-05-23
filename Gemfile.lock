@@ -89,6 +89,7 @@ GEM
     multi_xml (0.5.1)
     nokogiri (1.5.2)
     orm_adapter (0.0.7)
+    pdfkit (0.5.2)
     polyglot (0.3.3)
     rack (1.4.1)
     rack-cache (1.2)
@@ -174,6 +175,7 @@ DEPENDENCIES
   httparty
   jquery-rails
   nokogiri
+  pdfkit
   rails (= 3.2.1)
   sass-rails (~> 3.2.3)
   simple_form

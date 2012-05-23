@@ -1,0 +1,19 @@
+.page-header
+	h1 
+		| Tickets
+		small  Purchase your tickets below
+= form_for( :tickets, :html => { :class => 'form-vertical' }) do |f|
+    .control-group
+      = f.label :movie, :class => 'control-label'
+      .controls
+        = f.text_field :movie, :class => 'text_field'
+    .control-group
+      = f.label :buyer, :class => 'control-label'
+      .controls
+        = f.text_field :buyer, :class => 'text_field'
+    .control-group
+      = f.label :quantity, :class => 'control-label'
+      .controls
+        = f.text_field :quantity, :class => 'text_field'
+    .form-actions
+      = f.submit 'Reserve Ticket', :class => 'btn btn-primary'
