@@ -37,7 +37,7 @@ coffee:
     center
       .span3.well
         = image_tag('logo.png')
-        h3 Receive Movie Notifications
+        h3 Text Notifications
         br/
         p Receive special Reel Deals, and notifications when new movies become available!
         hr
@@ -45,8 +45,13 @@ coffee:
       .span3.well
         = image_tag('logo.png')
         h3 Pricing
-        br/
-        p Movies are $3.00 a movie, with an  additional $2.00 charge added for 3-D movies.
+        table.table.table-striped
+          tr
+            td Movie
+            td $3
+          tr
+            td 3D Movie
+            td $5
         hr
           span= link_to 'Reel Deals', deals_path, :class => 'btn btn-primary'
       .span3.well

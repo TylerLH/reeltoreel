@@ -22,6 +22,11 @@ body {
     background-image: url(clabkgnd.gif);
 }
 
+.content img {
+  opacity:0.1;
+  filter:alpha(opacity=40); /* For IE8 and earlier */
+}
+
 .content {
 	background-color: white;
 }
@@ -30,10 +35,12 @@ body {
 	width: 900px;
 	margin:0 auto;
 }
-
+.container-body {
+  background-image: url(container-bg.png);
+  background-repeat: repeat-y repeat-x;
+}
 
 .footer {
 	margin:auto;
-	background-color: whiteSmoke;
 	text-align: center;
 }
