@@ -4,18 +4,22 @@
 			= link_to	t(:site_name), root_path, :class => "brand"
 
 			ul.nav.pull-left
+				li.divider-vertical
 				li
 					a(href="#{showtimes_path}" title="Showtimes") Showtimes
+				li.divider-vertical
 				li
 					a(href="#{deals_path}" title="Reel Deals!") Reel Deals!
+				li.divider-vertical
 				li
 					a(href="#{contact_index_path}" title="Contact us") Contact
+				li.divider-vertical
 
 			/ USER ACCOUNT MANAGEMENT DROPDOWN & LINKS
 			- if user_signed_in?
 				ul.nav.pull-right.right-nav
+					li.divider-vertical
 			  		li
-			  			br/
 			  			= current_user.email
 			  		li.divider-vertical
 			  		li
@@ -40,6 +44,7 @@
 
 			- else
 			  	ul.nav.pull-right.right-nav
+			  		li.divider-vertical
 			  		li
 			  			a(href="#{new_user_session_path}" title="Sign in")
 			  				i.icon.icon-signin
