@@ -17,24 +17,18 @@ body {
   padding-top: 40px !important;
 }
 
-.content {
- background-image: url(clabkgnd.gif);
-}
-
 .page-header h1 {
-    margin-bottom: 0;
     font-size: 60px;
-    line-height: 1;
     letter-spacing: -1px;
     color: inherit;
 }
 
 .container-body {
-  padding: 20px;
-  background-color: #fff;
+  padding: 10px 20px 20px 20px;
   height: 100%;
-  -moz-box-shadow: 0 0 10px 3px #999;
-  -webkit-box-shadow: 0 0 10px 3px #999;
-  box-shadow: 0 0 10px 3px #999;
+  background: #fff;
+  -moz-box-shadow: 0 0 20px 3px #999;
+  -webkit-box-shadow: 0 0 20px 3px #999;
+  box-shadow: 0 0 20px 3px #999;
   filter: progid:DXImageTransform.Microsoft.Shadow(color='#999', Direction=135, Strength=2);
 }

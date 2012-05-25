@@ -6,8 +6,11 @@ coffee:
 #myModal.modal.hide.fade
   .modal-header
     button.close*{"data-dismiss" => "modal"} ×
-    h3 Register for SMS Text
-  .modal-body
+    h1 Text Notifications
+    p Receive special Reel Deals, and notifications when new movies become available!
+    ul
+      li Receive notifications when we start playing new movies.
+      li Receive special promotional deals.
     #subscribe-alerts
     = form_for @subscribe do |f|
       .field
@@ -15,7 +18,7 @@ coffee:
         = f.text_field :name
       .field
         = f.label :phone
-        = f.text_field :phone, :placeholder => "4235121771"
+        = f.text_field :phone
       .actions = f.submit 'Subscribe'
   .modal-footer
     a.btn.btn-danger*{"data-dismiss" => "modal"} Close
@@ -39,12 +42,13 @@ coffee:
         = image_tag('logo.png')
         h3 Text Notifications
         br/
-        p Receive special Reel Deals, and notifications when new movies become available!
+        p Receive special Reel Deals, updates, and notifications when new movies become available!
         hr
         a.btn.btn-primary*{"data-toggle" => "modal", :href => "#myModal"} Subscribe
       .span3.well
         = image_tag('logo.png')
         h3 Pricing
+        br/
         table.table.table-striped
           tr
             td Movie
@@ -64,6 +68,7 @@ coffee:
       .span3.well
         = image_tag('logo.png')
         h3 Advertise with us
-        p Advertise your business on our screens. Its fast, affordable and effective. Contact us for more information by phone or send an email with the link below.
+        br/
+        p Advertise your business on our screens! Its fast, affordable and effective. Contact us for details!
         hr
         span = link_to 'Contact Us', contact_index_path, :class => 'btn btn-primary'

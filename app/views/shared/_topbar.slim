@@ -5,15 +5,20 @@
 
 			ul.nav.pull-left
 				li.divider-vertical
-				li
-					a(href="#{showtimes_path}" title="Showtimes") Showtimes
+                li
+  					a(href="#{showtimes_path}" title="Showtimes")
+  						i.icon.icon-facetime-video
+  						|  Showtimes
 				li.divider-vertical
-				li
-					a(href="#{deals_path}" title="Reel Deals!") Reel Deals!
+                li
+  					a(href="#{deals_path}" title="Reel Deals!")
+  						i.icon.icon-tags
+  						|  Reel Deals!
 				li.divider-vertical
-				li
-					a(href="#{contact_index_path}" title="Contact us") Contact
-				li.divider-vertical
+                li
+  					a(href="#{contact_index_path}" title="Contact Us")
+  						i.icon.icon-pencil
+  						|  Contact Us
 
 			/ USER ACCOUNT MANAGEMENT DROPDOWN & LINKS
 			- if user_signed_in?

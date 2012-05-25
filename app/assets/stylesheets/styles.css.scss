@@ -27,20 +27,22 @@ body {
   filter:alpha(opacity=40); /* For IE8 and earlier */
 }
 
-.content {
-	background-color: white;
-}
-
 .center-container {
 	width: 900px;
 	margin:0 auto;
 }
 .container-body {
-  background-image: url(container-bg.png);
   background-repeat: repeat-y repeat-x;
 }
 
 .footer {
 	margin:auto;
 	text-align: center;
+}
+
+.navbar .brand {
+  color: #fff;
+}
+.navbar {
+    color: #fff;
 }
