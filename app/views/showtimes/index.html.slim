@@ -2,12 +2,14 @@
   .page-header
 	h1 
 	  | Showtimes
-	  small  Find out what plays when
+	  small  Find out whats playing now
 
-  ul.unstyled.movies
-	- @showtimes.each do |movie|
+.span12
+  center
+    ul.unstyled.movies
+	  - @showtimes.each do |movie|
 		li.listing(data-title="#{movie[:title]}")
-			.span4
+			.span5
 				.thumbnail
 					= link_to image_tag(movie[:imdb].poster), movie[:link]
 					.caption
