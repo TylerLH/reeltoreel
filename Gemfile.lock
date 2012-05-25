@@ -108,6 +108,7 @@ GEM
     netrc (0.7.2)
     nokogiri (1.5.2)
     orm_adapter (0.0.7)
+    pg (0.13.2)
     polyglot (0.3.3)
     rack (1.4.1)
     rack-cache (1.2)
@@ -202,6 +203,7 @@ DEPENDENCIES
   httparty
   jquery-rails
   nokogiri
+  pg
   rails (= 3.2.1)
   sass-rails (~> 3.2.3)
   simple_form
