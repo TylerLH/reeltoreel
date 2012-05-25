@@ -21,41 +21,44 @@ coffee:
     a.btn.btn-danger*{"data-dismiss" => "modal"} Close
 
 .row-fluid
-  .span12
-    center
-      .theme-default
-        #slider.nivoSlider
-          = image_tag('Popcorn.jpg', :title => "Fresh Popcorn")
-          = image_tag('RealToReelTheater.jpg', :title => "Real to Reel Theater Entrance")
-          = image_tag('screen.jpg', :title => "Movie Screens at Real to Reel Theater")
+  .page-header
+    h1
+      | Reel To Real
+      small  Treat yourself to a movie!
+  center
+    .theme-default
+      #slider.nivoSlider
+        = image_tag('Popcorn.jpg', :title => "Fresh Popcorn")
+        = image_tag('RealToReelTheater.jpg', :title => "Real to Reel Theater Entrance")
+        = image_tag('screen.jpg', :title => "Movie Screens at Real to Reel Theater")
 
 .row-fluid
   .span12
     center
       .span3.well
+        = image_tag('logo.png')
         h3 Receive Movie Notifications
         br/
         p Receive special Reel Deals, and notifications when new movies become available!
         hr
         a.btn.btn-primary*{"data-toggle" => "modal", :href => "#myModal"} Subscribe
       .span3.well
+        = image_tag('logo.png')
         h3 Pricing
         br/
         p Movies are $3.00 a movie, with an  additional $2.00 charge added for 3-D movies.
         hr
           span= link_to 'Reel Deals', deals_path, :class => 'btn btn-primary'
       .span3.well
+        = image_tag('logo.png')
         h3 Showtimes
         br/
         p See a list of movies and their available showtimes currently playing at Real to Real Theaters!
         hr
           span= link_to 'Showtimes', showtimes_path, :class => 'btn btn-primary'
       .span3.well
-        h3 Advertise with us 
-        p Advertise your business on our screens. Its fast, affordable and effective. Contact us for more information by phone or send an email with the link below. 
+        = image_tag('logo.png')
+        h3 Advertise with us
+        p Advertise your business on our screens. Its fast, affordable and effective. Contact us for more information by phone or send an email with the link below.
         hr
         span = link_to 'Contact Us', contact_index_path, :class => 'btn btn-primary'
-
-
-
-

@@ -17,6 +17,21 @@ body {
   padding-top: 40px !important;
 }
 
+.content {
+ background-image: url(clabkgnd.gif);
+}
+
+.page-header h1 {
+    margin-bottom: 0;
+    font-size: 60px;
+    line-height: 1;
+    letter-spacing: -1px;
+    color: inherit;
+    small {
+      padding: 20px;
+    }
+}
+
 .container-body {
   padding: 20px;
   background-color: #fff;
