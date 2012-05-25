@@ -12,9 +12,17 @@
 @import 'default';
 @import 'showtimes';
 @import 'application.css';
+@import 'deals';
+@import 'main';
+
+
 
 body {
 	padding-top: 60px;
+}
+
+.content {
+	background-color: white;
 }
 
 .center-container {

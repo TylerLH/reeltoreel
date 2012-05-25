@@ -1,40 +1,60 @@
 coffee:
-	$ ->
-		$('#slider').nivoSlider()
+  $ ->
+    $('#slider').nivoSlider()
+
+
+#myModal.modal.hide.fade
+  .modal-header
+    button.close*{"data-dismiss" => "modal"} ×
+    h3 Register for SMS Text
+  .modal-body
+    #alerts
+    = form_for @subscribe do |f|
+      .field
+        = f.label :name
+        = f.text_field :name
+      .field
+        = f.label :phone
+        = f.text_field :phone
+      .actions = f.submit 'Subscribe'
+  .modal-footer
+    a.btn.btn-danger*{"data-dismiss" => "modal"} Close
 
 .row-fluid
-	.span12
-		center
-			.theme-default
-				#slider.nivoSlider
-					= image_tag('Popcorn.jpg', :title => "Fresh Popcorn")
-					= image_tag('RealToReelTheater.jpg', :title => "Real to Reel Entrance")
+  .span12
+    center
+      .theme-default
+        #slider.nivoSlider
+          = image_tag('Popcorn.jpg', :title => "Fresh Popcorn")
+          = image_tag('RealToReelTheater.jpg', :title => "Real to Reel Entrance")
 
 .row-fluid
-	.span12
-		center
-			.span3.well
-				h3 Receive Movie Notifications
-                p Receive special Reel Deals, and notifications when new movies become available!
-                hr
-                = button_to_function "Subscribe","alert('Subscribed')", :class => 'btn btn-primary btn-large'
-			.span3.well
-				h3 Pricing
-				p Movies are $3.00 a movie. An additional $2.00 charge is added for 3-D movies.
-				hr
-			    span= link_to 'Reel Deals', deals_path, :class => 'btn btn-primary btn-large'
-			.span3.well
-				h3 Showtimes
-				p See a list of movies currently playing at Real to Real Theaters!
-				hr
-			    span= link_to 'Showtimes', showtimes_path, :class => 'btn btn-primary btn-large'
-			.span3.well
-				h3 Contact
-				p If you need any information about the theater. You can use the contact form to email us. 
-				hr
-				span = link_to 'Contact Us', contact_index_path, :class => 'btn btn-primary btn-large'
+  .span12
+    center
+      .span3.well
+        h3 Receive Movie Notifications
+        br/
+        p Receive special Reel Deals, and notifications when new movies become available!
+        hr
+        a.btn.btn-primary*{"data-toggle" => "modal", :href => "#myModal"} Subscribe
+      .span3.well
+        h3 Pricing
+        br/
+        p Movies are $3.00 a movie, with an  additional $2.00 charge added for 3-D movies.
+        hr
+          span= link_to 'Reel Deals', deals_path, :class => 'btn btn-primary'
+      .span3.well
+        h3 Showtimes
+        br/
+        p See a list of movies and their available showtimes currently playing at Real to Real Theaters!
+        hr
+          span= link_to 'Showtimes', showtimes_path, :class => 'btn btn-primary'
+      .span3.well
+        h3 Advertise with us 
+        p Advertise your business on our screens. Its fast, affordable and effective. Contact us for more information by phone or send an email with the link below. 
+        hr
+        span = link_to 'Contact Us', contact_index_path, :class => 'btn btn-primary'
 
 
 
-.modal#myModal
-	.modal-header
+

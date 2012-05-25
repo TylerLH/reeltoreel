@@ -1,5 +1,6 @@
-.span5.pull-left
-  h1 Contact Us
+.span12
+  h2 Contact Us
+  br/
   = form_for( :contact, :html => { :class => 'form-vertical' }) do |f|
     .control-group
       = f.label :name, :class => 'control-label'
@@ -16,6 +17,6 @@
     .control-group
       = f.label :message, :class => 'control-label'
       .controls
-        = f.text_area :message, :class => 'text_area', 'rows' => 10, :style => 'width: 100%;'
-    .form-actions
+        = f.text_area :message, :class => 'text_area', 'rows' => 10, :style => 'width: 80%;'
+    .control-group
       = f.submit 'Send Message', :class => 'btn btn-primary'

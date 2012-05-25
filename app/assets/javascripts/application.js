@@ -13,3 +13,22 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+
+jQuery.fn.submitWithAjax = function() {
+  this.submit(function() {
+    $.ajax({
+      type: "POST",
+      url: "/subscribes",
+      data: $("#new_subscribe").serialize(),
+      error: function(data) { $("#alerts").html('That number is already registered or in an incorrect format.');},
+      success: function(data) { $("#alerts").html('You have successfully registered to SMS messaging.');},
+      complete: function() {},
+      dataType: "json"
+    });
+    return false;
+  });
+};
+
+$(document).ready(function() {
+  $("#new_subscribe").submitWithAjax();
+})

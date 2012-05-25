@@ -1,0 +1,19 @@
+- model_class = @subscribe.class
+div class="page-header"
+  h1=t '.title', :default => model_class.model_name.human
+
+p
+  strong= model_class.human_attribute_name(:name) + ':'
+  br
+  = @subscribe.name
+p
+  strong= model_class.human_attribute_name(:phone) + ':'
+  br
+  = @subscribe.phone
+
+.form-actions
+  = link_to t('.back', :default => t("helpers.links.back")), subscribes_path, :class => 'btn'
+  '
+  = link_to t('.edit', :default => t("helpers.links.edit")), edit_subscribe_path(@subscribe), :class => 'btn'
+  '
+  = link_to t('.destroy', :default => t("helpers.links.destroy")), subscribe_path(@subscribe), :method => "delete", :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')), :class => 'btn btn-danger'

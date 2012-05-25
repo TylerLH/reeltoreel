@@ -1,4 +1,6 @@
 Reeltoreel::Application.routes.draw do
+  resources :subscribes
+
   resources :showtimes
   resources :deals
 

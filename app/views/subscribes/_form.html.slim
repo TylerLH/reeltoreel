@@ -1,0 +1,7 @@
+= simple_form_for @subscribe, :html => { :class => "form-horizontal" } do |f|
+  = f.input :name
+  = f.input :phone
+  .form-actions
+    = f.button :submit, :class => 'btn-primary'
+    '
+    = link_to t('.cancel', :default => t("helpers.links.cancel")), subscribes_path, :class => 'btn'
