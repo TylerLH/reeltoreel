@@ -27,9 +27,6 @@ body {
     line-height: 1;
     letter-spacing: -1px;
     color: inherit;
-    small {
-      padding: 20px;
-    }
 }
 
 .container-body {

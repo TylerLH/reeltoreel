@@ -8,9 +8,8 @@ html
 		= csrf_meta_tags
 
 		body
-			.content
-				= render 'shared/topbar'
-				= render 'shared/alerts'
-                .container.container-body
-					= yield
-					= render 'shared/footer'
+          = render 'shared/topbar'
+          = render 'shared/alerts'
+          .container.container-body
+		    = yield
+            = render 'shared/footer'
