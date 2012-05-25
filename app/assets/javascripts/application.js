@@ -20,8 +20,8 @@ jQuery.fn.submitWithAjax = function() {
       type: "POST",
       url: "/subscribes",
       data: $("#new_subscribe").serialize(),
-      error: function(data) { $("#alerts").html('That number is already registered or in an incorrect format.');},
-      success: function(data) { $("#alerts").html('You have successfully registered to SMS messaging.');},
+      error: function(data) { $("#subscribe-alerts").html('Error - That number is already registered or in an incorrect format.');},
+      success: function(data) { $("#subscribe-alerts").html('You have successfully registered for the SMS messaging service.');},
       complete: function() {},
       dataType: "json"
     });

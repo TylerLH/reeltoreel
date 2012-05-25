@@ -8,14 +8,14 @@ coffee:
     button.close*{"data-dismiss" => "modal"} ×
     h3 Register for SMS Text
   .modal-body
-    #alerts
+    #subscribe-alerts
     = form_for @subscribe do |f|
       .field
         = f.label :name
         = f.text_field :name
       .field
         = f.label :phone
-        = f.text_field :phone
+        = f.text_field :phone, :placeholder => "4235121771"
       .actions = f.submit 'Subscribe'
   .modal-footer
     a.btn.btn-danger*{"data-dismiss" => "modal"} Close
@@ -26,7 +26,8 @@ coffee:
       .theme-default
         #slider.nivoSlider
           = image_tag('Popcorn.jpg', :title => "Fresh Popcorn")
-          = image_tag('RealToReelTheater.jpg', :title => "Real to Reel Entrance")
+          = image_tag('RealToReelTheater.jpg', :title => "Real to Reel Theater Entrance")
+          = image_tag('screen.jpg', :title => "Movie Screens at Real to Reel Theater")
 
 .row-fluid
   .span12
