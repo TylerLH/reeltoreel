@@ -16,3 +16,4 @@
 .rvmrc
 *~
 *.swp
+.sass-cache

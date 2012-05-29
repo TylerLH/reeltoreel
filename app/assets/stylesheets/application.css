@@ -9,6 +9,8 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
+ *= require bootstrap_and_overrides
+ *= require_tree .
 */
 
 body {
@@ -30,4 +32,20 @@ body {
   -webkit-box-shadow: 0 0 20px 3px #999;
   box-shadow: 0 0 20px 3px #999;
   filter: progid:DXImageTransform.Microsoft.Shadow(color='#999', Direction=135, Strength=2);
+}
+
+body { padding-top: 60px;  background-image: url(clabkgnd.gif); }
+
+.content img {
+  opacity:0.1;
+  filter:alpha(opacity=40); /* For IE8 and earlier */
+}
+
+.footer {
+    margin:auto;
+    text-align: center;
+}
+
+.navbar .brand {
+  color: #fff !important;
 }
